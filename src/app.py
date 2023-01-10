@@ -4,6 +4,8 @@ from flask import Flask
 import os
 
 app = Flask(__name__)
+csrf = CSRFProtect()
+csrf.init_app(app) # Compliant
 
 @app.route("/")
 def hello_world():
